@@ -1,12 +1,15 @@
+using Microsoft.EntityFrameworkCore;
+
 var builder = WebApplication.CreateBuilder(args);
 
 // Add services to the container.
-
+builder.Services.AddDbContext<API_test1.Data.CourseContext>(opt => opt.UseNpgsql
+    (builder.Configuration.GetConnectionString("CourseConnectionSQL_POSTGRES")));
 builder.Services.AddControllers();
 // Learn more about configuring Swagger/OpenAPI at https://aka.ms/aspnetcore/swashbuckle
 builder.Services.AddEndpointsApiExplorer();
 builder.Services.AddSwaggerGen();
-
+builder.Services.AddScoped<API_test1.Data.ICourseRepo, API_test1.Data.MockCourseRepo>();
 var app = builder.Build();
 
 // Configure the HTTP request pipeline.
