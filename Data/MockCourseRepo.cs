@@ -29,7 +29,8 @@ namespace API_test1.Data
             return new List<Course>()
             {
                 new Course(){ CourseId = 1, CourseName = "Panificação", CreationDate = DateTime.Now , Syllabus = "Noções básicas de panificação"},
-                new Course(){ CourseId = 2, CourseName = "Confeitaria", CreationDate = DateTime.Now , Syllabus = "Noções básicas de confeitaria"}
+                new Course(){ CourseId = 2, CourseName = "Confeitaria", CreationDate = DateTime.Now , Syllabus = "Noções básicas de confeitaria"},
+                new Course(){ CourseId = 3, CourseName = "Conservação", CreationDate = DateTime.Now , Syllabus = "Conservação de alimentos"}
             };
         }
 
